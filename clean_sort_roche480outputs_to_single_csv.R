@@ -1,25 +1,3 @@
-### This script is for taking samples run in duplicate during an absolute quantification analysis (standard curve) on Roche Lightcycler480 qPCR machine. 
-###   The concentration of each well is calculated in the program prior to file export
-###     The first file contains information for each individual well.
-###       The second file contains means information of the duplicate pairs of wells, as indicated in the software prior to export.
-###         However, the second file does not contain the sample name of the pairs.
-
-### This program removes extraneous information from the first file, natural sorts each well alphabetically (A1, A2...-H12), and exports a .csv of the cleaned data.
-###   It then overwrites the duplicate pair listed in  the second file with the name of the sample indicated in the first file, while removing excess information.
-###       If a sample is not part of a duplicate pair, it is still listed in the second file but with "NA" values for the Means --
-###       There cannot be a mean value taken from a single data point.
-
-### Prior to executing the program, ensure .txt files are converted to .tsv.
-###   This can be done using CMD: rename *.txt *.tsv
-
-### This program is written such that it can only be run once in a folder. 
-###   If run again, the list.files(...) function will return the newly created files from the previous run,
-###       which are formatted differently than the original files.
-###         This will cause the program to stop and throw an error message.
-
-
-##################### CODE BEGINS BELOW #######################
-
 ### environment setup; change folder with .tsv files accordingly. Install tidyverse if needed.
 
 #setwd("C:/Users/asmit/Desktop/qPCR_datafiles_LASV/Processed_Nikisins")
