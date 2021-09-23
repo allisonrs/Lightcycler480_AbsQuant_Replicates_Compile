@@ -1,5 +1,5 @@
 # Lightcycler480_Replicates_Name
-Add names to replicate pair file outputs from an "absolute quantification" analysis on the Roche Lightcycler 480.
+Using R, add names to replicate pair file outputs from an "absolute quantification" analysis on the Roche Lightcycler 480.
 
   The concentration of each well is calculated in the program prior to file export, as determined by 2nd Derivative Max standard curve analysis. 
 There are two raw data files that can be exported from this analysis. 
